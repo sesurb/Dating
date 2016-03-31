@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body ng-controller="myController">
+    <input type="text" ng-model="newPerson.name" placeholder="My Name"/><br/>
+    <input type="text" ng-model="newPerson.age" placeholder="My Age" /><br />
+    <input type="text" ng-model="newPerson.hotness" placeholder="My Hotness" /><br />
+    <input type="text" ng-model="newPerson.gender" placeholder="Gender" /><br />
+    <button ng-click="addPerson()">Submit My Info</button>
+    <br/>
+    <br/>
+    {{people}}
+
+    <br />
+    <br/>
+    Me:
+    <br/>
+    {{me}}
+    <br />
+    <br />
+    <button ng-click="findMatches()">Get My Matches</button>
+    <br />
+    <ul>
+        <li ng-repeat="p in peoplematched track by $index">
+            {{p.name}}
+        </li>
+    </ul>
+    {{peoplematched}}
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js "></script>
+    <script src="app.js "></script>
+    <script src="controller.js "></script>
+    <script src="service.js "></script>
+</body>
+</html>
